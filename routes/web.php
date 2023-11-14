@@ -19,9 +19,12 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('index');
+        return view('ventas');
     })->name('dashboard');
     Route::get('/', function () {
-        return view('index');
+        return view('ventas');
     })->name('dashboard');
+    Route::get('/productos', function () {
+        return view('productos');
+    })->name('productos');
 });
