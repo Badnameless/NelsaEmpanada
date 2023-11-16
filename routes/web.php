@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware([
     'auth:sanctum',
@@ -27,4 +30,7 @@ Route::middleware([
     Route::get('/productos', function () {
         return view('productos');
     })->name('productos');
+    Route::get('/consultar-ventas', function () {
+        return view('consultar-ventas');
+    })->name('consulventas');
 });
