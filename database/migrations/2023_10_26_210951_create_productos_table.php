@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre', 100);
             $table->float('precio', 10,2);
+            $table->string('imagen', 200)->nullable();
             $table->timestamps();
             $table->unsignedBigInteger('categoriasID');
             

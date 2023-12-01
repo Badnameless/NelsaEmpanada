@@ -6,14 +6,7 @@
 @section('selectedConsult', 'text-gray-400 hover:text-white hover:bg-gray-800')
 @section('content')
     <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-6 border-b border-white/5 bg-gray-900 px-4 shadow-sm sm:px-6 lg:px-8">
-        <button type="button" class="-m-2.5 p-2.5 text-white xl:hidden">
-            <span class="sr-only">Open sidebar</span>
-            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path>
-            </svg>
-        </button>
-
-        <div class="border-r-2 border-white/5 flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
+        <div class="border-r-2 border-white/5 w-[69.6%] flex gap-x-4 self-stretch lg:gap-x-6">
             <form class="flex flex-1" action="#" method="GET">
             <label for="search-field" class="sr-only">Search</label>
             <div class="relative w-full">
@@ -24,7 +17,7 @@
             </div>
             </form>
         </div>
-        <label for="timezone" class="block text-sm font-medium leading-6 text-white">Filtrar por categoria</label>
+        <label for="timezone" class="block text-sm font-medium leading-6 text-white">Categoria</label>
         <div class="mt-2">
             <select id="timezone" name="timezone" class="mb-2 block rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 [&amp;_*]:text-black">
                 <option>Pacific Standard Time</option>
@@ -33,4 +26,92 @@
             </select>
         </div>
     </div>
+    <div class="grid grid-cols-3 items-start">
+        <div class="grid grid-cols-2 col-span-2 w-full">
+            <div class="mt-4 CardDiv ml-4 border border-white/5">
+                <div>
+                    <img src="img/Placeholder.webp" alt="" class="w-full h-full object-cover object-center">
+                </div>
+                <div class="grid grid-rows-2 items-center justify-center py-2">
+                    <div class="text-base font-semibold leading-7 text-white border-white/5 border-b pb-2">
+                        Empanada de pollo
+                    </div>
+                    <div class="text-base font-semibold leading-7 text-white">
+                        25.00 RD$
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 CardDiv ml-4 border border-white/5">
+                <div>
+                    <img src="img/Placeholder.webp" alt="" class="w-full h-full object-cover object-center">
+                </div>
+                <div class="grid grid-rows-2 items-center justify-center py-2">
+                    <div class="text-base font-semibold leading-7 text-white border-white/5 border-b pb-2">
+                        Empanada de pollo
+                    </div>
+                    <div class="text-base font-semibold leading-7 text-white">
+                        25.00 RD$
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 CardDiv ml-4 border border-white/5">
+                <div>
+                    <img src="img/Placeholder.webp" alt="" class="w-full h-full object-cover object-center">
+                </div>
+                <div class="grid grid-rows-2 items-center justify-center py-2">
+                    <div class="text-base font-semibold leading-7 text-white border-white/5 border-b pb-2">
+                        Empanada de pollo
+                    </div>
+                    <div class="text-base font-semibold leading-7 text-white">
+                        25.00 RD$
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 CardDiv ml-4 border border-white/5">
+                <div>
+                    <img src="img/Placeholder.webp" alt="" class="w-full h-full object-cover object-center">
+                </div>
+                <div class="grid grid-rows-2 items-center justify-center py-2">
+                    <div class="text-base font-semibold leading-7 text-white border-white/5 border-b pb-2">
+                        Empanada de pollo
+                    </div>
+                    <div class="text-base font-semibold leading-7 text-white">
+                        25.00 RD$
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky ml-4 border-b border-r border-l border-white/5 pl-6 pr-8 py-2">
+            <div class="text-center text-xl font-semibold leading-7 text-white">
+                Factura final
+            </div>
+            <div class="mt-3 border-white/5 border rounded-md text-center text-base font-semibold leading-7 text-white">
+                Productos
+            </div>
+            <div>
+                <textarea readonly class="resize-none outline-none mt-4 w-full pl-2 rounded-md border border-white/5 bg-transparent" name="" id="" cols="30" rows="10">
+                </textarea>
+            </div>
+            <div class="mt-3 border-white/5 border rounded-md text-center text-base font-semibold leading-7 text-white">
+                Total
+                <div class="mb-1 border-t border-white/5 text-center text-xl font-semibold leading-7 text-white">
+                    100.00
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-4 mb-3">
+                <button type="submit" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                    Realizar venta
+                </button>
+                <button type="submit" class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400">
+                    Cancelar venta
+                </button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .CardDiv{
+            display: grid;
+            grid-template-columns: 125px 1fr;
+        }
+    </style>
 @endsection
