@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,11 @@ use App\Http\Controllers\LoginController;
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/create_categoria', [CategoriaController::class, 'Create'])->name('CreateCategoria');
+Route::get('/create_producto', [ProductoController::class, 'product'])->name('CreateProducto');
+Route::get('/destroy_producto/{id}', [ProductoController::class, 'destroy'])->name('DestroyProduct');
+Route::get('/edit_producto/{id}', [ProductoController::class, 'edit'])->name('EditProducto');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -27,9 +34,7 @@ Route::middleware([
     Route::get('/', function () {
         return view('ventas');
     })->name('dashboard');
-    Route::get('/productos', function () {
-        return view('productos');
-    })->name('productos');
+    Route::get('/productos', [ProductoController::class, 'showProducts'])->name('showProductos');
     Route::get('/consultar-ventas', function () {
         return view('consultar-ventas');
     })->name('consulventas');
